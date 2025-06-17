@@ -15,8 +15,9 @@
       <h2 class="text-2xl font-bold mb-10">Dashboard</h2>
       <nav class="space-y-4">
         <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🏠 Home</a>
-        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">📝 Postingan</a>
-        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">👥 Pengguna</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">📸 Status</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">👥 Pelapor</a>
+        <a href="/home" class="block px-4 py-2 rounded hover:bg-blue-800">📝 Formulir</a>
       </nav>
       <form action="/logout" method="POST" class="mt-auto">
         @csrf
