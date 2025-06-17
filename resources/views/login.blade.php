@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - Cuit App</title>
+  <title>Login - p3k</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
@@ -18,7 +18,7 @@
     @endif
     <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Welcome Back</h2>
     
-    <form action="{{ route('login.post') }}" method="POST">
+    <form action="{{ route('login') }}" method="POST">
        @csrf
       <div class="mb-4">
         <label class="block text-sm mb-1">Email or Username</label>
