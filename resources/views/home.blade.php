@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cuit App</title>
+  <title>P3K</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -12,31 +12,21 @@
 
     <!-- Header -->
     <div class="flex justify-between items-center mb-8">
-      <h1 class="text-xl font-bold text-blue-700">Hallo, User</h1>
+      <h1 class="text-xl font-bold text-blue-700">Hallo, Eshi Aulia</h1>
       <form action="/" method="post">
         @csrf
-        <button type="submit" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
-          Logout
-        </button>
       </form>
     </div>
 
     <!-- Cuit Input -->
     <div class="bg-white p-6 rounded-xl shadow mb-8">
+      <h1>Nama</h1>
       <textarea
         class="w-full border border-gray-300 rounded-lg p-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-        rows="4"
-        placeholder="What's on your mind?"
+        rows="1"
+        placeholder="nama pelaporan"
       ></textarea>
-      <div class="text-right mt-4">
-        <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
-          Cuit
-        </button>
-      </div>
     </div>
-
-    <!-- Posts Section -->
-    <div class="space-y-6">
 
       <!-- Post Card -->
       <div class="bg-white p-5 rounded-xl shadow">
@@ -75,7 +65,9 @@
           </div>
         </div>
       </div>
-
+      <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+          Submit
+        </button>
     </div>
   </div>
 
