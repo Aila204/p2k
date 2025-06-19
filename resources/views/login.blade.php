@@ -8,13 +8,13 @@
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-200 via-white to-blue-100 min-h-screen flex items-center justify-center font-sans">
+<body class="bg-gradient-to-br from-blue-300 via-white to-orange-200 min-h-screen flex items-center justify-center font-sans">
 
-  <div class="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 relative">
-
+  <div class="w-full max-w-md bg-gradient-to-b from-blue-400 to-orange-400 rounded-3xl shadow-xl p-8 relative">
     <!-- Logo -->
     <div class="text-center mb-6">
-      <h1 class="text-3xl font-extrabold text-blue-700">Welcome Back 👋</h1>
+      <img src="{{ asset('images/logo-STT-NF-1.png') }}" class="mx-auto h-28 md:h-32 mb-6 object-contain" alt="">
+      <h1 class="text-3xl font-extrabold text-blue-700"></h1>
       <p class="text-gray-500 text-sm mt-1">Please login to continue</p>
     </div>
 

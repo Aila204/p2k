@@ -11,7 +11,8 @@
   <div class="flex min-h-screen">
 
     <!-- Sidebar -->
-    <aside class="w-64 bg-blue-700 text-white flex flex-col p-6">
+    <aside class="w-64 bg-amber-500
+ text-white flex flex-col p-6">
       <h2 class="text-2xl font-bold mb-10">Dashboard</h2>
       <nav class="space-y-4">
         <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🏠 Home</a>
@@ -27,7 +28,7 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 p-10">
+    <main class="flex-1 p-10 bg-gradient-to-b from-blue-400 to-orange-400">
       <!-- Header -->
       <div class="flex justify-between items-center mb-8">
         <h1 class="text-2xl font-bold text-gray-700">Selamat datang, {{ Auth::user()->name ?? 'User' }}</h1>
