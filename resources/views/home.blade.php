@@ -18,7 +18,7 @@
       </form>
     </div>
 
-    <!-- Cuit Input -->
+    <!-- p2k Input -->
     <div class="bg-white p-6 rounded-xl shadow mb-8">
       <h1>Nama</h1>
       <textarea
@@ -26,7 +26,18 @@
         rows="1"
         placeholder="nama pelaporan"
       ></textarea>
-    </div>
+    </div> 
+
+    <!-- Tanggal pelaporan -->
+    <div class="bg-white p-5 rounded-xl shadow mb-8">
+  <h1 class="text-lg mb-3">Tanggal Melapor</h1>
+
+  <div class="mb-4">
+    <label for="tanggal" class="block text-sm font-medium text-gray-700">Tanggal:</label>
+    <input type="date" id="tanggal" name="tanggal" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+  </div>
+</div>
+
 
       <!-- Post Card -->
       <div class="bg-white p-5 rounded-xl shadow mb-8"> 
@@ -39,7 +50,7 @@
       </div>
 
       <!-- Another Post Card -->
-      <div class="bg-white p-5 rounded-xl shadow"> 
+      <div class="bg-white p-5 rounded-xl shadow mb-2"> 
        <h1>Deskripsi Kerusakan</h1>
           <textarea
           class="w-full border border-gray-300 rounded-lg p-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
