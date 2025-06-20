@@ -28,7 +28,7 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 p-10 bg-gradient-to-b from-blue-400 to-orange-400">
+    <main class="flex-1 p-10 bg-white">
       <!-- Header -->
       <div class="flex justify-between items-center mb-8">
         <h1 class="text-2xl font-bold text-gray-700">Selamat datang, {{ Auth::user()->name ?? 'User' }}</h1>
