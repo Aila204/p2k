@@ -19,43 +19,43 @@ class DatabaseSeeder extends Seeder
             'name' => 'harunyahya',
             'email' => 'haryah@example.com',
             'password' => bcrypt('harunyhy1'),
-            'roll' => 'user'
+            'role' => 'user'
         ]);
         User::create([
             'name' => 'mahyadi',
             'email' => 'mahyadi@example.com',
             'password' => bcrypt('mahyadi12'),
-            'roll' => 'user'
+            'role' => 'user'
         ]);
         User::create([
             'name' => 'admin',
             'email' => 'admin@example.com',
             'password' => bcrypt('admin123'),
-            'roll' => 'admin'
+            'role' => 'admin'
         ]);
         User::create([
             'name' => 'hanif',
             'email' => 'hanif@example.com',
             'password' => bcrypt('hanif123'),
-            'roll' => 'user'
+            'role' => 'user'
         ]);
         User::create([
             'name' => 'nurul',
             'email' => 'nurul@example.com',
             'password' => bcrypt('nurul123'),
-            'roll' => 'user'
+            'role' => 'user'
         ]);
         User::create([
             'name' => 'yahya',
             'email' => 'yahya@example.com',
             'password' => bcrypt('yahya123'),
-            'roll' => 'user'
+            'role' => 'user'
         ]);
         User::create([
             'name' => 'mutia',
             'email' => 'mutia@example.com',
             'password' => bcrypt('mutia123'),
-            'roll' => 'user'
+            'role' => 'user'
         ]);
     }
 }
