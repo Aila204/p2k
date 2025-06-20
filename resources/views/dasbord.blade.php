@@ -52,23 +52,21 @@
 <!-- Cards -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-  <a href="../login" class="block">
+  <a href="/home" class="block">
     <div class="bg-white p-6 rounded-lg shadow hover:shadow-md hover:bg-gray-50">
-      <h3 class="text-lg font-semibold text-blue-600">Jumlah Postingan</h3>
-      <p class="text-2xl mt-2 font-bold">12</p>
+      <h3 class="text-lg font-semibold text-blue-600">Membuat Laporan</h3>
     </div>
   </a>
 
   <a href="/pengguna" class="block">
     <div class="bg-white p-6 rounded-lg shadow hover:shadow-md hover:bg-gray-50">
       <h3 class="text-lg font-semibold text-green-600">Pengguna Aktif</h3>
-      <p class="text-2xl mt-2 font-bold">5</p>
     </div>
   </a>
 
   <a href="/komentar" class="block">
     <div class="bg-white p-6 rounded-lg shadow hover:shadow-md hover:bg-gray-50">
-      <h3 class="text-lg font-semibold text-purple-600">Komentar Hari Ini</h3>
+      <h3 class="text-lg font-semibold text-purple-600">Status Pelaporan</h3>
       <p class="text-2xl mt-2 font-bold">7</p>
     </div>
   </a>
