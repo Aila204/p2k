@@ -8,13 +8,13 @@
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-300 via-white to-orange-200 min-h-screen flex items-center justify-center font-sans">
+<body class="bg-gradient-to-br from-blue-200 via-white to-blue-100 min-h-screen flex items-center justify-center font-sans">
 
-  <div class="w-full max-w-md bg-gradient-to-b from-blue-400 to-orange-400 rounded-3xl shadow-xl p-8 relative">
+  <div class="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 relative">
+
     <!-- Logo -->
     <div class="text-center mb-6">
-      <img src="{{ asset('images/logo-STT-NF-1.png') }}" class="mx-auto h-28 md:h-32 mb-6 object-contain" alt="">
-      <h1 class="text-3xl font-extrabold text-blue-700"></h1>
+      <h1 class="text-3xl font-extrabold text-blue-700">Welcome Back 👋</h1>
       <p class="text-gray-500 text-sm mt-1">Please login to continue</p>
     </div>
 
@@ -29,7 +29,7 @@
       </script>
     @endif
 
-    <form action="{{ route('login') }}" method="POST" class="space-y-5">
+    <form action="{{ route('login.action') }}" method="POST" class="space-y-5">
       @csrf
 
       <!-- Email Field -->
@@ -73,7 +73,7 @@
 
     <!-- Footer -->
     <p class="text-xs text-center text-gray-400 mt-6">
-      Don't have an account? <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+      Don't have an account? <a href="\regiter" class="text-blue-500 hover:underline">Sign up</a>
     </p>
 
   </div>
