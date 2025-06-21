@@ -11,17 +11,21 @@ class AuthController extends Controller
 {
     public function login(Request $request): RedirectResponse
     {
-        if (Auth::attempt([
-            'email' => $request->email,
-            'password' => $request->password
-         ])) {
-            $user = User::where('email', $request->email)->first();
-            Auth::login($user);
-            return redirect('/dasbord');
-         }
-         return redirect()->back()->withErrors([
-            'error' => 'Email or Password is incoret',
-         ]); 
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+
+            if ($user->role === 'admin') {
+                return redirect('/dasbordAdmin');
+            } else {
+                return redirect('/dasbord');
+            }
+        }
+
+        return redirect()->back()->withErrors([
+            'error' => 'Email or Password is incorrect',
+        ]);
     }
 
     public function register(Request $request)

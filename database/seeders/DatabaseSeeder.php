@@ -57,5 +57,6 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('mutia123'),
             'role' => 'user'
         ]);
+        $this->call(LaporanSeeder::class);
     }
 }
