@@ -62,6 +62,7 @@
               class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
+<<<<<<< HEAD
           <div class="mb-4">
             <label class="block text-sm font-medium text-gray-700 mb-1" for="tanggal">Tanggal Melapor</label>
             <input type="date" name="tanggal_melapor" id="tanggal"
@@ -79,6 +80,26 @@
             <textarea name="deskripsi_kerusakan" id="deskripsi" rows="3" placeholder="Deskripsi Kerusakan"
               class="w-full border border-gray-300 rounded-md p-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
           </div>
+=======
+  <a href="/home" class="block">
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-md hover:bg-gray-50">
+      <h3 class="text-lg font-semibold text-blue-600">Membuat Laporan</h3>
+    </div>
+  </a>
+
+  <a href="/pengguna" class="block">
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-md hover:bg-gray-50">
+      <h3 class="text-lg font-semibold text-green-600">Pengguna Aktif</h3>
+    </div>
+  </a>
+
+  <a href="/komentar" class="block">
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-md hover:bg-gray-50">
+      <h3 class="text-lg font-semibold text-purple-600">Status Pelaporan</h3>
+      <p class="text-2xl mt-2 font-bold">7</p>
+    </div>
+  </a>
+>>>>>>> c0b5c09f25847f28d2ed13868881ee17e4a2b4ef
 
           <button type="submit"
             class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 w-full rounded-md transition">
