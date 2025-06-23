@@ -12,7 +12,8 @@
 
     <!-- Sidebar -->
     <aside class="w-64 bg-blue-700 text-white flex flex-col p-6">
-      <h2 class="text-2xl font-bold mb-10">Dashboard</h2>
+      <h2 class="text-2xl font-bold mb-10">P2K</h2>
+      <p>Platfrom Pelaporan Kerusakan</p>
       <nav class="space-y-4">
         <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🏠 Home</a>
         <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🧑‍💻 Profil</a>

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('tanggal_melapor');
             $table->string('lokasi_kerusakan');
             $table->text('deskripsi_kerusakan')->nullable();
+            $table->string('lampiran')->nullable();
             $table->timestamps();
         });
     }
