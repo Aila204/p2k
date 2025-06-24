@@ -30,7 +30,7 @@
       </script>
     @endif
 
-    <form action="{{ route('login.action') }}" method="POST" class="space-y-5">
+    <form action="{{ route('login') }}" method="POST" class="space-y-5">
       @csrf
 
       <!-- Email Field -->
@@ -71,11 +71,6 @@
         Login
       </button>
     </form>
-
-    <!-- Footer -->
-    <p class="text-xs text-center text-gray-400 mt-6">
-      Don't have an account? <a href="\regiter" class="text-blue-500 hover:underline">Sign up</a>
-    </p>
 
   </div>
 
