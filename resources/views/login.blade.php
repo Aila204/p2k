@@ -20,12 +20,12 @@
 
 
     <!-- Error Alert -->
-    @if (session('error'))
+    @if(Session::has('error'))
       <script>
         Swal.fire({
           icon: 'error',
           title: 'Login Failed',
-          text: '{{ session('error') }}',
+          text: '{{ Session::get('error') }}',
         });
       </script>
     @endif
@@ -67,7 +67,7 @@
 
       <!-- Submit Button -->
       <button type="submit" 
-        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold" a href="/dasbord">
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
         Login
       </button>
     </form>
