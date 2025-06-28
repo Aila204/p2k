@@ -172,9 +172,9 @@
             <div class="flex items-center space-x-6">
                 <img src="https://via.placeholder.com/150" alt="Foto Profil" class="avatar">
                 <div>
-                    <h3 class="text-xl font-semibold">Nama Pengguna</h3>
-                    <p class="text-gray-600">Email: pengguna@example.com</p>
-                    <p class="text-gray-600">Nomor Telepon: 0812-3456-7890</p>
+                    <h3 class="text-xl font-semibold">{{ $user->name }}</h3>
+                    <p class="text-gray-600">Email: {{ $user->email }}</p>
+                    <p class="text-gray-600">Nomor Telepon: {{ $user->phone ?? '-' }}</p>
                 </div>
             </div>
         </section>

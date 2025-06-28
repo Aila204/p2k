@@ -11,20 +11,30 @@
   <div class="flex min-h-screen">
 
     <!-- Sidebar -->
-    <aside class="w-64 bg-blue-700 text-white flex flex-col p-6">
-      <h2 class="text-2xl font-bold mb-10">P2K</h2>
-      <p>Platfrom Pelaporan Kerusakan</p>
-      <nav class="space-y-4">
-        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🏠 Home</a>
-        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🧑‍💻 Profil</a>
-      </nav>
-      <form action="/logout" method="POST" class="mt-auto">
-        @csrf
-        <button type="submit" class="w-full mt-10 bg-red-500 hover:bg-red-600 py-2 rounded text-white">
-          Logout
-        </button>
-      </form>
-    </aside>
+<aside class="bg-gradient-to-b from-blue-300 to-blue-100 text-blue-900 w-64 min-h-screen p-5 rounded-r-3xl shadow flex flex-col">
+  <h2 class="text-2xl font-bold mb-6">P2K</h2>
+  <p class="mb-8 text-sm">Platform Pelaporan Kerusakan</p>
+  
+  <nav class="space-y-3">
+    <!-- Home -->
+    <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
+      🏠 <span>Home</span>
+    </a>
+
+    <!-- Profil -->
+    <a href="{{ route('profil') }}" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
+      🧑‍💻 <span>Profil</span>
+    </a>
+  </nav>
+
+  <!-- Logout Button -->
+  <form action="/logout" method="POST" class="mt-auto">
+    @csrf
+    <button type="submit" class="w-full mt-10 bg-red-500 hover:bg-red-600 py-2 rounded-lg text-white font-semibold transition">
+      Logout
+    </button>
+  </form>
+</aside>
 
     <!-- Main Content -->
     <main class="flex-1 p-10">
@@ -43,49 +53,66 @@
           </div>
         </div>
       </div>
-      <!-- ✅ Form Pelaporan -->
-      <div class="bg-white rounded-xl shadow p-8 w-full">
-        <h2 class="text-xl font-bold mb-6 text-blue-600">Formulir Pelaporan</h2>
-        
-        {{-- Alert Sukses --}}
-        @if(session('success'))
-          <div class="mb-4 p-4 bg-green-100 text-green-700 rounded-md">
-            {{ session('success') }}
-          </div>
-        @endif
 
-        <form action="/lapor" method="POST">
-          @csrf
+<!-- ✅ Form Pelaporan Modern -->
+<div class="bg-white rounded-xl shadow-md p-8 w-full max-w-2xl mx-auto">
+  <h2 class="text-2xl font-bold mb-6 text-blue-600">Formulir Pelaporan</h2>
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-gray-700 mb-1" for="nama">Nama</label>
-            <input type="text" name="nama" id="nama" placeholder="Nama pelapor"
-              class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          </div>
+  {{-- Alert Sukses --}}
+  @if(session('success'))
+    <div class="mb-4 p-4 bg-green-100 text-green-700 rounded-md shadow-sm">
+      {{ session('success') }}
+    </div>
+  @endif
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-gray-700 mb-1" for="tanggal">Tanggal Melapor</label>
-            <input type="date" name="tanggal_melapor" id="tanggal"
-              class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          </div>
+  <form action="/lapor" method="POST" class="space-y-5">
+    @csrf
 
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-gray-700 mb-1" for="lokasi">Lokasi Kerusakan</label>
-            <input type="text" name="lokasi_kerusakan" id="lokasi" placeholder="Lokasi Kerusakan"
-              class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          </div>
-
-          <div class="mb-6">
-            <label class="block text-sm font-medium text-gray-700 mb-1" for="deskripsi">Deskripsi Kerusakan</label>
-            <textarea name="deskripsi_kerusakan" id="deskripsi" rows="3" placeholder="Deskripsi Kerusakan"
-              class="w-full border border-gray-300 rounded-md p-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-          </div>
-          <button type="submit"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 w-full rounded-md transition">
-            Submit
-          </button>
-        </form>
+    <!-- Nama -->
+    <div>
+      <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+      <div class="flex items-center bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 shadow-sm">
+        <span class="text-gray-400 mr-2">🧑</span>
+        <input type="text" name="nama" id="nama" placeholder="Masukkan nama Anda"
+          class="w-full bg-transparent focus:outline-none text-gray-800" />
       </div>
+    </div>
+
+    <!-- Tanggal Melapor -->
+    <div>
+      <label for="tanggal" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Melapor</label>
+      <div class="flex items-center bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 shadow-sm">
+        <span class="text-gray-400 mr-2">📅</span>
+        <input type="date" name="tanggal_melapor" id="tanggal"
+          class="w-full bg-transparent focus:outline-none text-gray-800" />
+      </div>
+    </div>
+
+    <!-- Lokasi Kerusakan -->
+    <div>
+      <label for="lokasi" class="block text-sm font-medium text-gray-700 mb-1">Lokasi Kerusakan</label>
+      <div class="flex items-center bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 shadow-sm">
+        <span class="text-gray-400 mr-2">📍</span>
+        <input type="text" name="lokasi_kerusakan" id="lokasi" placeholder="Masukkan lokasi kerusakan"
+          class="w-full bg-transparent focus:outline-none text-gray-800" />
+      </div>
+    </div>
+
+    <!-- Deskripsi Kerusakan -->
+    <div>
+      <label for="deskripsi" class="block text-sm font-medium text-gray-700 mb-1">Deskripsi Kerusakan</label>
+      <textarea name="deskripsi_kerusakan" id="deskripsi" rows="4" placeholder="Jelaskan kerusakan dengan detail"
+        class="w-full bg-gray-50 border border-gray-300 rounded-xl shadow-sm px-4 py-2 focus:outline-none text-gray-800 resize-none"></textarea>
+    </div>
+
+    <!-- Tombol Submit -->
+    <button type="submit"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 w-full rounded-xl shadow transition">
+      Kirim Laporan 🚀
+    </button>
+  </form>
+</div>
+
 
     </main>
   </div>

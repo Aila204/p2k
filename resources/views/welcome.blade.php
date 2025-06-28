@@ -10,12 +10,12 @@
     </head>
     <body class="bg-gradient-to-br from-blue-200 via-white to-blue-100 min-h-screen flex items-center justify-center font-sans">
 
-    <div class="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 relative">
+    <div class="w-full max-w-md bg-gradient-to-b from-blue-200 via-blue-100 to-orange-100 rounded-3xl shadow-xl p-8 relative">
 
         <!-- Logo -->
         <div class="text-center mb-6">
-        <h1 class="text-3xl font-extrabold text-blue-700">Welcome Back 👋</h1>
-        <p class="text-gray-500 text-sm mt-1">Please login to continue</p>
+            <img src="{{ asset('images/logo-STT-NF-1.png') }}" alt="Logo STT NF" class="mx-auto h-24 w-24 mb-2">
+            <p class="text-xl font-semibold text-blue-700">STT TERPADU NURUL FIKRI</p>
         </div>
 
         <!-- Error Alert -->

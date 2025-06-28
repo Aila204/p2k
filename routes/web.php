@@ -46,10 +46,7 @@ Route::post('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('/profil', function () {
-    return view('profil');
-})->name('profil');
+use App\Http\Controllers\ProfilController;
 
-Route::post('/profil', function () {
-    return view('profil');
-})->name('profil');
+Route::get('/profil', [ProfilController::class, 'index'])->middleware('auth')->name('profil');
+
