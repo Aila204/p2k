@@ -221,13 +221,13 @@
                     <p class="text-xs text-gray-500 mt-1">rohmat@stt-nf.ac.id</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Admin 3" class="avatar mx-auto mb-3">
-                    <h4 class="font-bold text-gray-800">Eshi Aulia</h4>
-                    <p class="text-gray-600 text-sm">Developer</p>
-                    <p class="text-xs text-gray-500 mt-1">eshi@stt-nf.ac.id</p>
+                <img src="{{ asset('images/aull.jpg') }}" alt="Eshi Aulia" class="mx-auto mb-3 rounded-full shadow-lg w-32 h-32 object-cover">
+                <h4 class="font-bold text-gray-800">Eshi Aulia</h4>
+                <p class="text-gray-600 text-sm">Developer</p>
+                <p class="text-xs text-gray-500 mt-1">eshi@stt-nf.ac.id</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Admin 4" class="avatar mx-auto mb-3">
+                    <img src="{{ asset('images/aila.jpg') }}" alt="Hayatu Suhaila" class="mx-auto mb-3 rounded-full shadow-lg w-32 h-32 object-cover">
                     <h4 class="font-bold text-gray-800">Hayatu Suhaila</h4>
                     <p class="text-gray-600 text-sm">Koordinator</p>
                     <p class="text-xs text-gray-500 mt-1">hayatu@stt-nf.ac.id</p>
@@ -239,7 +239,7 @@
                     <p class="text-xs text-gray-500 mt-1">yadi@stt-nf.ac.id</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Admin 6" class="avatar mx-auto mb-3">
+                    <img src="{{ asset('images/mutia.jpg') }}" alt="Mutia Rahma" class="mx-auto mb-3 rounded-full shadow-lg w-32 h-32 object-cover">
                     <h4 class="font-bold text-gray-800">Mutia Rahma</h4>
                     <p class="text-gray-600 text-sm">Teknisi Hardware</p>
                     <p class="text-xs text-gray-500 mt-1">mutia@stt-nf.ac.id</p>
