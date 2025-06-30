@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('login');
-})->name('login');
+})->name('login')-> middleware('guest');
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.action');
 
@@ -26,7 +26,7 @@ Route::get('/logout', function () {
 
 Route::get('/dasbord', function () {
     return view('dasbord');
-})->name('dasbord');
+})->name('dasbord')->middleware('auth');
 
 Route::get('/dasbordAdmin', function () {
     return view('dasbordAdmin');
