@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('lokasi_kerusakan');
             $table->text('deskripsi_kerusakan')->nullable();
             $table->string('lampiran')->nullable();
+            $table->enum('status', ['ditolak', 'diterima', 'proses']);
             $table->timestamps();
         });
     }
