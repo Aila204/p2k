@@ -163,7 +163,10 @@
         <!-- User Actions Section -->
         <section class="flex justify-end space-x-4 mb-8">
             <button class="btn-primary">Edit Profil</button>
-            <button class="btn-primary">Log Out</button>
+            <form action="/logout" method="POST" class="mt-auto">
+                @csrf
+                <button class="btn-primary">Log Out</button>
+            </form>
         </section>
 
         <!-- Profile Section -->
@@ -215,7 +218,7 @@
                     <p class="text-xs text-gray-500 mt-1">yahya@stt-nf.ac.id</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Admin 2" class="avatar mx-auto mb-3">
+                    <img src="{{ asset('images/rohmat.jpg') }}" alt="Admin 2" class="avatar mx-auto mb-3">
                     <h4 class="font-bold text-gray-800">Rohmatul Hidayat</h4>
                     <p class="text-gray-600 text-sm">Teknisi Perangkat</p>
                     <p class="text-xs text-gray-500 mt-1">rohmat@stt-nf.ac.id</p>
