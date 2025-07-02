@@ -189,6 +189,7 @@
                 <button class="btn-primary w-full">Ubah Kata Sandi</button>
                 <button class="btn-primary w-full">Pengaturan Privasi</button>
                 <button class="btn-primary w-full">Kelola Notifikasi</button>
+                <a href="{{ route('status.pengajuan') }}" class="btn-primary w-full text-center block">Status Pengajuan</a>
             </div>
         </section>
 

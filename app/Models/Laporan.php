@@ -14,5 +14,7 @@ class Laporan extends Model
         'tanggal_melapor',
         'lokasi_kerusakan',
         'deskripsi_kerusakan',
+         'status',
+        'user_id'
     ];
 }

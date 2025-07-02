@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\ProfilController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,8 +47,6 @@ Route::get('/home', function () {
 Route::post('/home', function () {
     return view('home');
 })->name('home');
-
-use App\Http\Controllers\ProfilController;
-
 Route::get('/profil', [ProfilController::class, 'index'])->middleware('auth')->name('profil');
-
+Route::get('/status-pengajuan', [ProfilController::class, 'statusPengajuan'])->name('status.pengajuan');
+Route::put('/laporan/{id}/status', [LaporanController::class, 'updateStatus'])->name('laporan.updateStatus');

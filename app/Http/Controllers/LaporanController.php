@@ -7,7 +7,7 @@ use App\Models\Laporan;
 
 class LaporanController extends Controller
 {
-    // Tampilkan semua laporan
+    // Tampilkan semua laporan untuk admin
     public function index()
     {
         $laporans = Laporan::latest()->get();
@@ -20,22 +20,29 @@ class LaporanController extends Controller
         return view('laporan.create');
     }
 
-    // Simpan laporan baru
+    // Simpan laporan baru dari user
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'nama' => 'required|string|max:255',
+        $request->validate([
+            'nama' => 'required|string',
             'tanggal_melapor' => 'required|date',
-            'lokasi_kerusakan' => 'required|string|max:255',
+            'lokasi_kerusakan' => 'required|string',
             'deskripsi_kerusakan' => 'nullable|string',
         ]);
 
-        Laporan::create($validated);
+        Laporan::create([
+            'nama' => $request->nama,
+            'tanggal_melapor' => $request->tanggal_melapor,
+            'lokasi_kerusakan' => $request->lokasi_kerusakan,
+            'deskripsi_kerusakan' => $request->deskripsi_kerusakan,
+            'status' => 'proses', // default status
+            'user_id' => auth()->id(), // ambil ID user yang sedang login
+        ]);
 
-        return redirect()->route('dasbord')->with('success', 'Laporan berhasil disimpan.');
+        return redirect()->back()->with('success', 'Laporan berhasil dikirim!');
     }
 
-    // Tampilkan 1 laporan
+    // Tampilkan laporan detail
     public function show($id)
     {
         $laporan = Laporan::findOrFail($id);
@@ -73,4 +80,16 @@ class LaporanController extends Controller
 
         return redirect()->route('laporan.index')->with('success', 'Laporan berhasil dihapus.');
     }
+            public function updateStatus(Request $request, $id)
+        {
+            $request->validate([
+                'status' => 'required|in:proses,diterima,ditolak',
+            ]);
+
+            $laporan = Laporan::findOrFail($id);
+            $laporan->status = $request->status;
+            $laporan->save();
+
+            return redirect()->back()->with('success', 'Status berhasil diperbarui.');
+        }
 }

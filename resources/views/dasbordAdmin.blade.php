@@ -56,6 +56,14 @@
           <h2 class="text-xl font-bold mb-4 text-blue-600">Data Laporan Masuk</h2>
 
           <div class="overflow-x-auto">
+              <tbody class="text-sm text-gray-700">
+                @forelse ($laporans as $index => $laporan)
+                @empty
+                  <tr>
+                    <td colspan="6" class="text-center py-4 text-gray-500">Belum ada data laporan.</td>
+                  </tr>
+                @endforelse
+              </tbody>
             <table class="min-w-full divide-y divide-gray-200">
               <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-600">
                 <tr>
@@ -64,7 +72,8 @@
                   <th class="px-4 py-2">Tanggal</th>
                   <th class="px-4 py-2">Lokasi</th>
                   <th class="px-4 py-2">Deskripsi</th>
-                  <th class="px-4 py-2">Aksi</th> <!-- Tambahan -->
+                  <th class="px-4 py-2">Status</th>
+                  <th class="px-4 py-2">Aksi</th>
                 </tr>
               </thead>
               <tbody class="text-sm text-gray-700">
@@ -72,9 +81,24 @@
                   <tr class="border-t">
                     <td class="px-4 py-2">{{ $index + 1 }}</td>
                     <td class="px-4 py-2">{{ $laporan->nama }}</td>
-                    <td class="px-4 py-2">{{ date('d-m-Y', strtotime($laporan->tanggal_melapor)) }}</td>
+                    <td class="px-4 py-2">{{ \Carbon\Carbon::parse($laporan->tanggal_melapor)->format('d-m-Y') }}</td>
                     <td class="px-4 py-2">{{ $laporan->lokasi_kerusakan }}</td>
                     <td class="px-4 py-2">{{ $laporan->deskripsi_kerusakan }}</td>
+
+                    <!-- Form Ubah Status -->
+                    <td class="px-4 py-2">
+                      <form action="{{ route('laporan.updateStatus', $laporan->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <select name="status" onchange="this.form.submit()" class="px-2 py-1 rounded border text-sm">
+                          <option value="proses" {{ $laporan->status == 'proses' ? 'selected' : '' }}>Proses</option>
+                          <option value="diterima" {{ $laporan->status == 'diterima' ? 'selected' : '' }}>Diterima</option>
+                          <option value="ditolak" {{ $laporan->status == 'ditolak' ? 'selected' : '' }}>Ditolak</option>
+                        </select>
+                      </form>
+                    </td>
+
+                    <!-- Tombol Aksi -->
                     <td class="px-4 py-2 space-x-2">
                       <a href="javascript:void(0);"
                         onclick="openModal(
@@ -99,11 +123,12 @@
                   </tr>
                 @empty
                   <tr>
-                    <td colspan="6" class="text-center py-4 text-gray-500">Belum ada data laporan.</td>
+                    <td colspan="7" class="text-center py-4 text-gray-500">Belum ada data laporan.</td>
                   </tr>
                 @endforelse
               </tbody>
             </table>
+
           </div>
         </div>
 
