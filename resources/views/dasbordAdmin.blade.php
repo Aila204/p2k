@@ -16,7 +16,6 @@
       <p class="white-space: nowrap;">Platform Pelaporan Kerusakan</p>
       <nav class="space-y-4">
         <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🏠 Home</a>
-        <a href="#" class="block px-4 py-2 rounded hover:bg-blue-800">🧑‍💻 Profil</a>
       </nav>
       <form action="/logout" method="POST" class="mt-auto">
         @csrf

@@ -160,14 +160,6 @@
     </header>
 
     <main class="container mx-auto px-4 py-12 space-y-16">
-        <!-- User Actions Section -->
-        <section class="flex justify-end space-x-4 mb-8">
-            <button class="btn-primary">Edit Profil</button>
-            <form action="/logout" method="POST" class="mt-auto">
-                @csrf
-                <button class="btn-primary">Log Out</button>
-            </form>
-        </section>
 
         <!-- Profile Section -->
         <section class="card p-8">
@@ -181,18 +173,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Settings Section -->
-        <section class="card p-8">
-            <h2 class="section-title text-3xl font-bold mb-8">Pengaturan Akun</h2>
-            <div class="space-y-4">
-                <button class="btn-primary w-full">Ubah Kata Sandi</button>
-                <button class="btn-primary w-full">Pengaturan Privasi</button>
-                <button class="btn-primary w-full">Kelola Notifikasi</button>
-                <a href="{{ route('status.pengajuan') }}" class="btn-primary w-full text-center block">Status Pengajuan</a>
-            </div>
-        </section>
-
         <!-- About Section -->
         <section class="card p-8" id="about">
             <h2 class="section-title text-3xl font-bold mb-8">Tentang Kami</h2>
@@ -213,7 +193,7 @@
             <h3 class="text-xl font-semibold text-gray-800 mb-6">Tim Kami</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Admin 1" class="avatar mx-auto mb-3">
+                    <img src="{{ asset('images/harun.jpg') }}" alt="Admin 1" class="avatar mx-auto mb-3">
                     <h4 class="font-bold text-gray-800">Harun Yahya</h4>
                     <p class="text-gray-600 text-sm">Teknisi Jaringan</p>
                     <p class="text-xs text-gray-500 mt-1">yahya@stt-nf.ac.id</p>
@@ -237,7 +217,7 @@
                     <p class="text-xs text-gray-500 mt-1">hayatu@stt-nf.ac.id</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Admin 5" class="avatar mx-auto mb-3">
+                    <img src="{{ asset('images/yadi.jpg') }}" alt="Admin 5" class="avatar mx-auto mb-3">
                     <h4 class="font-bold text-gray-800">Mahyadi Sanusi</h4>
                     <p class="text-gray-600 text-sm">Teknisi Software</p>
                     <p class="text-xs text-gray-500 mt-1">yadi@stt-nf.ac.id</p>

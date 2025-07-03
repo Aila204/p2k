@@ -15,17 +15,22 @@
   <h2 class="text-2xl font-bold mb-6">P2K</h2>
   <p class="mb-8 text-sm">Platform Pelaporan Kerusakan</p>
   
-  <nav class="space-y-3">
-    <!-- Home -->
-    <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
-      🏠 <span>Home</span>
-    </a>
+    <nav class="space-y-3">
+      <!-- Home -->
+      <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
+        🏠 <span>Home</span>
+      </a>
 
-    <!-- Profil -->
-    <a href="{{ route('profil') }}" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
-      🧑‍💻 <span>Profil</span>
-    </a>
-  </nav>
+      <!-- Profil -->
+      <a href="{{ route('profil') }}" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
+        🧑‍💻 <span>Profil</span>
+      </a>
+
+      <!-- Status Pengajuan -->
+      <a href="{{ route('status.pengajuan') }}" class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white hover:text-blue-700 transition">
+        📄 <span>Status Pengajuan</span>
+      </a>
+    </nav>
 
   <!-- Logout Button -->
   <form action="/logout" method="POST" class="mt-auto">
